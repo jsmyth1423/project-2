@@ -1,11 +1,10 @@
+import react from 'react';
 import React from 'react';
 import { getAllAgents } from '../lib/api';
 
 const GameMain = () => {
   const [agents, setAgents] = React.useState('');
-  // const [activeAgent, setActive] = React.useState(
-  //   agents[Math.floor(Math.random() * agents.length)]
-  // );
+
   React.useEffect(() => {
     const getData = async () => {
       try {
@@ -20,9 +19,13 @@ const GameMain = () => {
     console.log(agents);
   }, []);
 
-  const activeAgent = agents[Math.floor(Math.random() * agents.length)];
+  const [activeAgent, setActive] = React.useState('');
+  react.useEffect(() => {
+    setActive(agents[Math.floor(Math.random() * agents.length)]);
+    console.log('Active Agent', activeAgent);
+  }, [agents]);
 
-  // console.log(activeAgent);
+  console.log(activeAgent);
   return (
     <section className="section">
       <div className="container">
@@ -31,17 +34,7 @@ const GameMain = () => {
             <p>Loading...</p>
           ) : (
             <>
-              <h2>
-                {/* {agents[Math.floor(Math.random() * agents.length)].displayName} */}
-                {activeAgent.displayName}
-              </h2>
-              <img
-                src={
-                  // agents[Math.floor(Math.random() * agents.length)].bustPortrait
-                  activeAgent.bustPortrait
-                }
-                alt="agentpic"
-              ></img>
+              <h2> {activeAgent.displayName}</h2>
             </>
           )}
         </div>

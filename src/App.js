@@ -5,6 +5,8 @@ import Home from './components/Home';
 import Navbar from './components/Navbar';
 import GameMain from './components/GameMain.js';
 
+//import { getAllAgents } from './lib/api';
+
 function App() {
   return (
     <BrowserRouter>
