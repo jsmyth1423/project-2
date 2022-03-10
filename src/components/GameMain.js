@@ -4,6 +4,7 @@ import { getAllAgents } from '../lib/api';
 
 const GameMain = () => {
   const [agents, setAgents] = React.useState('');
+  const [activeAgent, setActive] = React.useState('');
 
   React.useEffect(() => {
     const getData = async () => {
@@ -15,17 +16,13 @@ const GameMain = () => {
       }
     };
     getData();
-
-    console.log(agents);
   }, []);
 
-  const [activeAgent, setActive] = React.useState('');
   react.useEffect(() => {
     setActive(agents[Math.floor(Math.random() * agents.length)]);
     console.log('Active Agent', activeAgent);
   }, [agents]);
 
-  console.log(activeAgent);
   return (
     <section className="section">
       <div className="container">
@@ -34,18 +31,26 @@ const GameMain = () => {
             <p>Loading...</p>
           ) : (
             <>
-              <h2> {activeAgent.displayName}</h2>
+              {activeAgent && <h2>{activeAgent.displayName}</h2>}
+            </>
+          )}
+          {!agents ? (
+            <p>Loading...</p>
+          ) : (
+            <>
+              {activeAgent && <img src={activeAgent.bustPortrait} alt="agentpic"></img>}
             </>
           )}
         </div>
-        <img
+        {activeAgent && <img
           src={
             activeAgent.abilities[
               Math.floor(Math.random() * activeAgent.abilities.length)
             ].displayIcon
           }
           alt="abilitypic"
-        ></img>
+        ></img>}
+
       </div>
     </section>
   );
