@@ -1,13 +1,28 @@
 @import '~bulma/bulma.sass';
 
 h2 {
-  color:white
+  color:white;
+}
+
+.background-for-home {
+  background-image: url('../../public/peakpx.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .abilities-container {
   display: flex;
   justify-content: space-around;
   text-align: center;
+}
+
+.container {
+  display:flex
+}
+.agent-container{
+  display:flex;
+  flex-direction: column;
+  width: 50vw
 }
 
 .answer-wrapper {
@@ -24,4 +39,59 @@ h2 {
 .ability-img{
   height:128px;
   margin: 5px;
+}
+
+.agent-show{
+  padding:2.5%
+}
+
+.hints-container{
+  width: 25vw
+}
+
+footer{
+  color:white;
+  text-align:center;
+  padding: 10px
+}
+
+.card-image {
+  padding: 10px;
+}
+
+.ability-list {
+  display:flex;
+  flex-direction:column;
+}
+.ability-row {
+  display:flex;
+  align-items:center
+}
+.ability-text{
+  display:flex;
+  flex-direction: column;
+  h4{
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+}
+
+#agent-portrait{
+  max-height:85vh;
+  width:auto;
+}
+
+.showing-hint {
+  display: none;
+}
+
+#hints {
+  color: white;
+  border: 1px white solid;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.homepage-text{
+  padding: 5%
 }

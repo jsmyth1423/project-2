@@ -18,7 +18,7 @@ function AgentsIndex() {
 
   return (
     <>
-      <section className="section">
+      <section className="hero is-fullheight-with-navbar has-background-black">
         <div className="container">
           <div className="columns is-multiline">
             {!agents ? (

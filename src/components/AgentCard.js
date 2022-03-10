@@ -15,7 +15,7 @@ const AgentCard = ({ uuid, displayName, displayIcon, description }) => {
             </figure>
           </div>
           <div className="card-content">
-            <h5>{description}</h5>
+            <p className='has-text-black'>{description}</p>
           </div>
         </div>
       </Link>

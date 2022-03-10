@@ -2,11 +2,12 @@ import React from 'react';
 import Hints from './Hints';
 import { getAllAgents } from '../lib/api';
 
+
+
 const GameMain = () => {
   const [agents, setAgents] = React.useState([]);
   const [activeAgent, setActive] = React.useState(null);
   const [answers, setAnswers] = React.useState([]);
-
   React.useEffect(() => {
     const getData = async () => {
       try {
@@ -32,16 +33,26 @@ const GameMain = () => {
   }
 
   function compareChoice(e) {
+    let isCorrect = false;
     for (let i = 0; i < activeAgent.abilities.length; i++) {
-      if (activeAgent.abilities[i].displayName === e.target.id) {
-        window.alert('You won');
-      } else console.log('player clicked', e.target.id);
+      if (activeAgent.abilities[i].displayName.toLowerCase().replace(' ', '') === e.target.id) {
+        isCorrect = true;
+      }
+    }
+    if (isCorrect === true) {
+      if (window.confirm('Congrats, you won! Play again?')) {
+        window.location.reload();
+      };
+      console.log(`clicked: ${e.target.id}`);
+    } else if (isCorrect === false) {
+      window.alert('Bad luck, try again!');
+      console.log(`clicked: ${e.target.id}`);
     }
   }
   function selectRandomAbilities(activeAgent, agents) {
     console.log('activeAgent', activeAgent);
     console.log('agents array', agents);
-    const correctAnswer = activeAgent.abilities[Math.floor(Math.random() * activeAgent.abilities.length)];
+    const correctAnswer = activeAgent.abilities[Math.floor(Math.random() * 4)];
     const inactiveAbilities = agents.map((agent) => agent.abilities);
     // console.log('inactive abilities', inactiveAbilities);
     const wrongAnswers = [];
@@ -77,32 +88,40 @@ const GameMain = () => {
     return array;
   }
 
+
   return (
-    <section className="hero is-fullheight-with-navbar has-background-black">
-      <div className="container">
-        <div className="hints-container">
-          <Hints activeAgent={activeAgent} /></div>
-        <div className="title has-text-centered">
-          {!agents ? (
-            <p>Loading...</p>
-          ) : (
-            <>
-              {activeAgent && <h2>{activeAgent.displayName}</h2>}
-            </>
-          )}
-          {!agents ? (
-            <p>Loading...</p>
-          ) : (
-            <>
-              {activeAgent && <img src={activeAgent.bustPortrait} className="agent-img" alt="agentpic"></img>}
-            </>
-          )}
+    <>
+      <section className="hero is-fullheight-with-navbar has-background-black">
+        {!agents ? (
+          <p>Loading...</p>
+        ) : (
+          <div className="title has-text-centered">
+            {activeAgent && <h2>{activeAgent.displayName}</h2>}
+          </div>
+        )}
+        <div className="container">
+          <div className="hints-container">
+            <Hints activeAgent={activeAgent} /></div>
+          <div className="agent-container">
+
+            {!agents ? (
+              <p>Loading...</p>
+            ) : (
+              <div className="has-text-centered">
+                {activeAgent && <img src={activeAgent.bustPortrait} className="agent-img" alt="agentpic"></img>}
+              </div>
+            )}
+          </div>
+
         </div>
         <div className='abilities-container'>
-          {!answers ? (<p>Loading Abilities...</p>) : (answers.map((answer) => (<div key={answer.displayName} className="answer-wrapper" onClick={compareChoice}> <div className="answer-text" id={answer.displayName}>{answer.displayName} </div><img src={answer.displayIcon} id={answer.displayName} className="ability-img" /></div>)))}
+          {!answers ? (<p>Loading Abilities...</p>) : (answers.map((answer) => (<div key={answer.displayName} className="answer-wrapper" onClick={compareChoice}> <div className="answer-text" id={answer.displayName.toLowerCase().replace(' ', '')}>{answer.displayName} </div><img src={answer.displayIcon} id={answer.displayName.toLowerCase().replace(' ', '')} className="ability-img" /></div>)))}
         </div>
-      </div>
-    </section>
+        <footer>
+          Powered by React
+        </footer>
+      </section>
+    </>
   );
 };
 export default GameMain;
