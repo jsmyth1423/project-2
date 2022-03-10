@@ -1,5 +1,27 @@
 @import '~bulma/bulma.sass';
 
-* {
-  background-color: black;
+h2 {
+  color:white
+}
+
+.abilities-container {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.answer-wrapper {
+  border: 1px solid #ececec
+}
+.answer-text {
+  background-color: #ececec;
+  color: black
+}
+.agent-img{
+  max-height: 500px
+}
+
+.ability-img{
+  height:128px;
+  margin: 5px;
 }

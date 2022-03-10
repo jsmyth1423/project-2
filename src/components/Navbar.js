@@ -13,6 +13,9 @@ const Navbar = () => {
             <Link to="/gamemain" className="navbar-item">
               Game
             </Link>
+            <Link to="/agentsindex" className="navbar-item">
+              Agents Index
+            </Link>
           </div>
         </div>
       </nav>
