@@ -6,6 +6,8 @@ const GameMain = () => {
   const [agents, setAgents] = React.useState([]);
   const [activeAgent, setActive] = React.useState(null);
   const [answers, setAnswers] = React.useState([]);
+  const [isRunning, setRunning] = React.useState(0);
+
   React.useEffect(() => {
     const getData = async () => {
       try {
@@ -19,7 +21,7 @@ const GameMain = () => {
       }
     };
     getData();
-  }, []);
+  }, [isRunning]);
 
   function activate(agents) {
     let randomIndex = Math.floor(Math.random() * agents.length);
@@ -44,7 +46,7 @@ const GameMain = () => {
     }
     if (isCorrect === true) {
       if (window.confirm('Congrats, you won! Play again?')) {
-        window.location.reload();
+        setRunning(isRunning + 1);
       }
       console.log(`clicked: ${e.target.id}`);
     } else if (isCorrect === false) {
@@ -121,6 +123,9 @@ const GameMain = () => {
                 )}
               </div>
             )}
+          </div>
+          <div className="score-wrapper title has-text-centered has-text-white">
+            Score: {isRunning}
           </div>
         </div>
         <div className="abilities-container">

@@ -105,3 +105,22 @@ footer {
 .homepage-text {
   padding: 5%;
 }
+
+.score-wrapper {
+  border: 1px white solid;
+  padding: 10px;
+  border-radius: 10px;
+  height: 60px;
+  // max-height: 120px;
+  width: 10vw;
+  white-space: nowrap;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: underline;
+}

@@ -24,14 +24,15 @@ function AgentsIndex() {
             {!agents ? (
               <p>Loading...</p>
             ) : (
-              agents.map((agent) => <AgentCard key={agent.displayName} {...agent} />)
+              agents.map((agent) => (
+                <AgentCard key={agent.displayName} {...agent} />
+              ))
             )}
           </div>
         </div>
       </section>
-
-
-    </>);
+    </>
+  );
 }
 
 export default AgentsIndex;
