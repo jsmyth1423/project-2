@@ -77,7 +77,7 @@ const GameMain = () => {
   function shuffle(array) {
     let currentIndex = array.length, randomIndex;
     // While there remain elements to shuffle...
-    while (currentIndex != 0) {
+    while (currentIndex !== 0) {
       // Pick a remaining element...
       randomIndex = Math.floor(Math.random() * currentIndex);
       currentIndex--;
@@ -115,11 +115,8 @@ const GameMain = () => {
 
         </div>
         <div className='abilities-container'>
-          {!answers ? (<p>Loading Abilities...</p>) : (answers.map((answer) => (<div key={answer.displayName} className="answer-wrapper" onClick={compareChoice}> <div className="answer-text" id={answer.displayName.toLowerCase().replace(' ', '')}>{answer.displayName} </div><img src={answer.displayIcon} id={answer.displayName.toLowerCase().replace(' ', '')} className="ability-img" /></div>)))}
+          {!answers ? (<p>Loading Abilities...</p>) : (answers.map((answer) => (<div key={answer.displayName} className="answer-wrapper" onClick={compareChoice}> <div className="answer-text" id={answer.displayName.toLowerCase().replace(' ', '')}>{answer.displayName} </div><img alt='displayicon' src={answer.displayIcon} id={answer.displayName.toLowerCase().replace(' ', '')} className="ability-img" /></div>)))}
         </div>
-        <footer>
-          Powered by React
-        </footer>
       </section>
     </>
   );

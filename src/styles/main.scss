@@ -4,6 +4,12 @@ h2 {
   color:white;
 }
 
+.title-text-font {
+  font-size: 70px;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+
 .background-for-home {
   background-image: url('../../public/peakpx.jpg');
   background-size: cover;
@@ -26,7 +32,8 @@ h2 {
 }
 
 .answer-wrapper {
-  border: 1px solid #ececec
+  border: 1px solid #ececec;
+  margin-bottom:20px
 }
 .answer-text {
   background-color: #ececec;
@@ -52,7 +59,8 @@ h2 {
 footer{
   color:white;
   text-align:center;
-  padding: 10px
+  padding: 10px;
+  font-size: 14px
 }
 
 .card-image {

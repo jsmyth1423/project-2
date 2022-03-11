@@ -6,6 +6,7 @@ import Navbar from './components/Navbar';
 import GameMain from './components/GameMain.js';
 import AgentsIndex from './components/AgentsIndex';
 import AgentShow from './components/AgentShow';
+import Footer from './components/Footer';
 
 //import { getAllAgents } from './lib/api';
 
@@ -18,8 +19,8 @@ function App() {
         <Route path="/gamemain" element={<GameMain />} />
         <Route path="/agentsindex" element={<AgentsIndex />} />
         <Route path="/agents/:uuid" element={<AgentShow />} />
-
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
