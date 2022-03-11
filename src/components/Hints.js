@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 function Hints({ activeAgent }) {
   const [isClass, setClass] = React.useState(true);
   const toggleClass = () => {
@@ -9,11 +8,17 @@ function Hints({ activeAgent }) {
 
   return (
     <>
-      <button className='button is-white is-outlined' onClick={toggleClass}>Show hint!</button>
-      <p id='hints' className={isClass ? 'showing-hint' : null}>{activeAgent && activeAgent.description}</p>
+      <button
+        className="button is-white is-outlined hint-btn"
+        onClick={toggleClass}
+      >
+        Show hint!
+      </button>
+      <p id="hints" className={isClass ? 'showing-hint' : null}>
+        {activeAgent && activeAgent.description}
+      </p>
     </>
   );
-
 }
 
 export default Hints;

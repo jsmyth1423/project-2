@@ -1,14 +1,13 @@
 @import '~bulma/bulma.sass';
 
 h2 {
-  color:white;
+  color: white;
 }
 
 .title-text-font {
   font-size: 70px;
   font-family: 'Bebas Neue', sans-serif;
 }
-
 
 .background-for-home {
   background-image: url('../../public/peakpx.jpg');
@@ -23,44 +22,44 @@ h2 {
 }
 
 .container {
-  display:flex
+  display: flex;
 }
-.agent-container{
-  display:flex;
+.agent-container {
+  display: flex;
   flex-direction: column;
-  width: 50vw
+  width: 50vw;
 }
 
 .answer-wrapper {
   border: 1px solid #ececec;
-  margin-bottom:20px
+  margin-bottom: 20px;
 }
 .answer-text {
   background-color: #ececec;
-  color: black
+  color: black;
 }
-.agent-img{
-  max-height: 500px
+.agent-img {
+  max-height: 500px;
 }
 
-.ability-img{
-  height:128px;
+.ability-img {
+  height: 128px;
   margin: 5px;
 }
 
-.agent-show{
-  padding:2.5%
+.agent-show {
+  padding: 2.5%;
 }
 
-.hints-container{
-  width: 25vw
+.hints-container {
+  width: 25vw;
 }
 
-footer{
-  color:white;
-  text-align:center;
+footer {
+  color: white;
+  text-align: center;
   padding: 10px;
-  font-size: 14px
+  font-size: 14px;
 }
 
 .card-image {
@@ -68,38 +67,41 @@ footer{
 }
 
 .ability-list {
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
 }
 .ability-row {
-  display:flex;
-  align-items:center
+  display: flex;
+  align-items: center;
 }
-.ability-text{
-  display:flex;
+.ability-text {
+  display: flex;
   flex-direction: column;
-  h4{
+  h4 {
     font-weight: bold;
     margin-bottom: 10px;
   }
 }
 
-#agent-portrait{
-  max-height:85vh;
-  width:auto;
-}
-
-.showing-hint {
-  display: none;
+#agent-portrait {
+  max-height: 85vh;
+  width: auto;
 }
 
 #hints {
   color: white;
   border: 1px white solid;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 0px 0px 10px 10px;
 }
 
-.homepage-text{
-  padding: 5%
+.hint-btn {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+.showing-hint {
+  display: none;
+}
+.homepage-text {
+  padding: 5%;
 }
