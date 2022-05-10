@@ -14,7 +14,7 @@ Mouse control for selecting
 
 - **Consume a public API** – this could be anything but it must make sense for your project.
 - **Have several components** - organise your components in the components folder in your src directory.
-- **The app can have a router** - with several "pages", this is up to your disgression and if it makes sense for your project.
+- **The app can have a router** - with several "pages", this is up to your discretion and if it makes sense for your project.
 - **Include wireframes** - that you designed before building the app.
 - **Be deployed online** and accessible to the public - we will deploy the apps together at the end of the project.
 
