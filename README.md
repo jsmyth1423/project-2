@@ -74,6 +74,7 @@ Consuming a public API meant that we just had to build the front-end around it, 
 2. State is a tricky tool but incredibly useful
 
 Before this project we had a rudimentary understanding of state, mostly in that we could use it quite basically but I personally did not understand it that well as I had only implemented it in identical ways to the teaching I had received, having to come up with our own code from scratch meant our uses of state felt very intentional, and between state and useEffects I learned a huge amount about why it is so necessary in React to use it. It undeniably was the cause of the majority of our challenges but is also essential to the project working.
+
 ---
 
 ## Ideals 
