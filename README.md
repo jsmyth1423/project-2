@@ -37,7 +37,7 @@ Mouse control for selecting
 ## The Plan: 
 (need to recreate wireframe as lost)
 
-I wireframed my basic idea as well as the steps I thought I would have to take in order to making a minimum viable product. This gave me a solid baseline of steps to work through.
+We collaboratively wireframed our vision of the project as well as the key things we thought would be necessary for a working product.
 
 ## Key Challenges:
 
