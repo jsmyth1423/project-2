@@ -1,4 +1,4 @@
-# Valorant Themed Guesssing Game - SEI Project 2
+# Valorant Themed Guessing Game - SEI Project 2
 
 [Play it here!](https://project-2-api.netlify.app/)
 
@@ -55,7 +55,7 @@ Retrieving the data was relatively simple, we then filtered it with a useful mod
 
 ---
 
-The selectRandomAbilities function did a lot of heavy-lifting. First it set the correct answer by randomly grabbing one of the 4 abiltiies from the active character state. We then created an array of abilities excluding the active character. Next we used a while loop to populate our empty wrong answers array, getting a random ability from the inactive list while checking for duplicates and removing them if any were randomly chosen.
+The selectRandomAbilities function did a lot of heavy-lifting. First it set the correct answer by randomly grabbing one of the 4 abilities from the active character state. We then created an array of abilities excluding the active character. Next we used a while loop to populate our empty wrong answers array, getting a random ability from the inactive list while checking for duplicates and removing them if any were randomly chosen.
 
 ![image](https://user-images.githubusercontent.com/53213823/167616696-6d78967d-cadb-48f0-b3d0-560948431f31.png)
 
@@ -69,7 +69,7 @@ The last step was to randomise the array of answers that would display to the us
 ## Lessons Learned
 1. You can get a lot done in 2 days (with two people)!
 
-Consuming a public API meant that we just had to build the front-end around it, and it being a two-person project felt like we had an exponential increase in general productvity rather than just double. The opportunity to constantly bounce solutions off of eachother was extremely useful and solving problems was generally easier with a greater volume of potential fixes.
+Consuming a public API meant that we just had to build the front-end around it, and it being a two-person project felt like we had an exponential increase in general productivity rather than just double. The opportunity to constantly bounce solutions off of eachother was extremely useful and solving problems was generally easier with a greater volume of potential fixes.
   
 2. State is a tricky tool but incredibly useful
 
